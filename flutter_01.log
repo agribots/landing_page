@@ -1,0 +1,92 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d chrome
+
+## exception
+
+RPCError: _flutter.renderFrameWithRasterStats: (-32601) Unknown method "_flutter.renderFrameWithRasterStats".
+
+```
+#0      new _OutstandingRequest (package:vm_service/src/vm_service.dart:1746:45)
+#1      VmService._call (package:vm_service/src/vm_service.dart:2262:21)
+#2      VmService.callServiceExtension (package:vm_service/src/vm_service.dart:2233:14)
+#3      VmService.callMethod (package:vm_service/src/vm_service.dart:2215:12)
+#4      FlutterVmService.callMethodWrapper (package:flutter_tools/src/vmservice.dart:463:28)
+#5      FlutterVmService.renderFrameWithRasterStats (package:flutter_tools/src/vmservice.dart:562:49)
+#6      ResidentHandlers.debugFrameJankMetrics (package:flutter_tools/src/resident_runner.dart:691:35)
+<asynchronous suspension>
+#7      TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1739:7)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.3.4, on Manjaro Linux
+    5.15.72-1-MANJARO, locale en_NZ.UTF-8)
+    • Flutter version 3.3.4 on channel stable at
+      /home/yohan/snap/flutter/common/flutter
+    • Upstream repository
+      https://github.com/flutter/flutter.git
+    • Framework revision eb6d86ee27 (10 days ago), 2022-10-04
+      22:31:45 -0700
+    • Engine revision c08d7d5efc
+    • Dart version 2.18.2
+    • DevTools version 2.15.0
+
+[✓] Android toolchain - develop for Android devices (Android
+    SDK version 31.0.0)
+    • Android SDK at /home/yohan/Android/Sdk/
+    • Platform android-31, build-tools 31.0.0
+    • ANDROID_HOME = /home/yohan/Android/Sdk/
+    • ANDROID_SDK_ROOT = /home/yohan/Android/Sdk
+    • Java binary at:
+      /var/lib/snapd/snap/android-studio/124/android-studio/jre
+      /bin/java
+    • Java version OpenJDK Runtime Environment (build
+      11.0.13+0-b1751.21-8125866)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • CHROME_EXECUTABLE = /usr/bin/google-chrome-stable
+
+[✓] Linux toolchain - develop for Linux desktop
+    • clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+    • cmake version 3.10.2
+    • ninja version 1.8.2
+    • pkg-config version 0.29.1
+
+[✓] Android Studio (version 2021.2)
+    • Android Studio at
+      /var/lib/snapd/snap/android-studio/123/android-studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build
+      11.0.12+0-b1504.28-7817840)
+
+[✓] Android Studio (version 2021.3)
+    • Android Studio at
+      /var/lib/snapd/snap/android-studio/124/android-studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build
+      11.0.13+0-b1751.21-8125866)
+
+[✓] Connected device (2 available)
+    • Linux (desktop) • linux  • linux-x64      • Manjaro Linux
+      5.15.72-1-MANJARO
+    • Chrome (web)    • chrome • web-javascript • Google Chrome
+      106.0.5249.119
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+• No issues found!
+```
