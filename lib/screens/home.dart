@@ -14,6 +14,7 @@ import 'package:sliver_tools/sliver_tools.dart';
 
 		✅(feat) Scroll down to section on nav or button click
 		❌(feat) Complete about and pricing jumbo
+		❌(bug) Darken banner so text is more visible
 */
 
 class HomeScreen extends StatelessWidget {
@@ -34,6 +35,7 @@ class HomeScreen extends StatelessWidget {
         itemCount: 4,
         itemBuilder: (context, index) {
           return Container(
+            color: Color(0xfff7eee6),
             child: Column(
               children: [
                 if (index == 0)

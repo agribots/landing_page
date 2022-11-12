@@ -31,7 +31,7 @@ class Jumbotron2 extends StatelessWidget {
                 children: <Widget>[
                   if (isMobile(context))
                     Image.asset(
-                      'assets/images/logo.png',
+                      'assets/images/logo-trans.png',
                       height: size.height * 0.08,
                     ),
                   RichText(
@@ -40,23 +40,23 @@ class Jumbotron2 extends StatelessWidget {
                           : TextAlign.center,
                       text: TextSpan(children: [
                         TextSpan(
-                            text: 'Farming Reimagined',
+                            text: 'About Us',
                             style: GoogleFonts.notoSans(
-                                fontSize: isDesktop(context) ? 64 : 32,
+                                fontSize: isDesktop(context) ? 48 : 28,
                                 fontWeight: FontWeight.w800,
                                 color: kPrimaryColor)),
                       ])),
                   Text(
-                    'Innovative IoT solutions for delicate crops',
+                    'Precisely control and monitor your farm from anywhere',
                     textAlign:
                         !isMobile(context) ? TextAlign.start : TextAlign.center,
                     style: GoogleFonts.notoSans(
-                        fontSize: isDesktop(context) ? 40 : 20,
+                        fontSize: isDesktop(context) ? 32 : 18,
                         fontWeight: FontWeight.w800),
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "Harness the latest hardware and software to autonomously improve plant health and yield, while reducing environmental impact.",
+                    "We are a team based in Bangkok dedicated to making farming more efficient. \n\nWe install a network of devices to monitor soil moisture, temperature, humidity and light - and automatically make fine adjustments as needed.",
                     textAlign:
                         isMobile(context) ? TextAlign.center : TextAlign.start,
                     style: TextStyle(
@@ -64,23 +64,6 @@ class Jumbotron2 extends StatelessWidget {
                         fontWeight: FontWeight.w300),
                   ),
                   SizedBox(height: 16),
-                  Wrap(
-                    runSpacing: 10,
-                    alignment: WrapAlignment.center,
-                    children: <Widget>[
-                      MainButton(
-                        title: 'Get Started',
-                        color: kPrimaryColor,
-                        tapEvent: () {},
-                      ),
-                      SizedBox(width: 10),
-                      MainButton(
-                        title: 'About Us',
-                        color: kSecondaryColor,
-                        tapEvent: () {},
-                      )
-                    ],
-                  )
                 ],
               ),
             )),
